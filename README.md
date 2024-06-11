@@ -5,6 +5,7 @@
 - TailwindCss
 - Immer
 - Lucide React
+- Context API
 
 # Vite + React + Typescript
 

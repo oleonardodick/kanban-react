@@ -20,7 +20,7 @@ export default function List({
     <div className="flex flex-col h-max w-80 p-3 gap-3 bg-zinc-300 rounded-xl">
       <header className="font-bold text-lg pl-3 flex justify-between">
         <span>{lista.title}</span>
-        <Trash2 />
+        <Trash2 className="hover:text-red-700" />
       </header>
       <Droppable droppableId={index.toString()}>
         {(provided) => (
@@ -39,7 +39,7 @@ export default function List({
           </ul>
         )}
       </Droppable>
-      <button type="button" className="flex gap-2">
+      <button type="button" className="flex gap-2 hover:font-bold w-max">
         <CirclePlus />
         <span>Add a Card</span>
       </button>
