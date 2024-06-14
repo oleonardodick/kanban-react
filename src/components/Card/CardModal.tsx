@@ -9,6 +9,8 @@ import {
 import { useContext } from 'react';
 import { DialogContext } from '../../contexts/DialogContext';
 import { ITask } from '../../interfaces/ITaks';
+import Button from '../Button';
+import CardForm from './CardForm';
 
 export default function CardModal({ task }: { task: ITask }) {
   const { closeDialog } = useContext(DialogContext);
@@ -17,15 +19,20 @@ export default function CardModal({ task }: { task: ITask }) {
     <Dialog>
       <DialogHeader>
         <DialogTitle>{task.name}</DialogTitle>
-        <button type="button" onClick={closeDialog}>
+        <Button size="icon" onClick={closeDialog}>
           <X />
-        </button>
+        </Button>
       </DialogHeader>
       <DialogContent>
-        <span>Conteúdo da Modal</span>
+        <CardForm />
       </DialogContent>
       <DialogFooter>
-        <span>Rodapé da modal</span>
+        <Button color="primary" size="md" type="submit" form="cardForm">
+          Salvar
+        </Button>
+        <Button color="secondary" size="md" onClick={closeDialog}>
+          Cancelar
+        </Button>
       </DialogFooter>
     </Dialog>
   );

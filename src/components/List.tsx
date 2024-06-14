@@ -2,6 +2,7 @@ import Card from './Card';
 import { ITask } from '../interfaces/ITaks';
 import { Droppable } from '@hello-pangea/dnd';
 import { CirclePlus, Trash2 } from 'lucide-react';
+import Button from './Button';
 
 interface ListaType {
   id: string;
@@ -20,7 +21,9 @@ export default function List({
     <div className="flex flex-col h-max w-80 p-3 gap-3 bg-zinc-300 rounded-xl">
       <header className="font-bold text-lg pl-3 flex justify-between">
         <span>{lista.title}</span>
-        <Trash2 className="hover:text-red-700" />
+        <Button size="icon">
+          <Trash2 className="hover:text-red-700" />
+        </Button>
       </header>
       <Droppable droppableId={index.toString()}>
         {(provided) => (
@@ -39,10 +42,12 @@ export default function List({
           </ul>
         )}
       </Droppable>
-      <button type="button" className="flex gap-2 hover:font-bold w-max">
-        <CirclePlus />
-        <span>Add a Card</span>
-      </button>
+      <Button size="icon">
+        <div className="flex gap-2 hover:font-bold">
+          <CirclePlus />
+          <span>Add a Card</span>
+        </div>
+      </Button>
     </div>
   );
 }

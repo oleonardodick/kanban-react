@@ -12,7 +12,7 @@ export function Dialog({ children }: { children: ReactNode }) {
 
 export function DialogHeader({ children }: { children: ReactNode }) {
   return (
-    <header className="p-4 flex justify-between border-b-2 border-zinc-300">
+    <header className="p-4 flex justify-between items-center border-b-2 border-zinc-300">
       {children}
     </header>
   );
@@ -23,12 +23,12 @@ export function DialogTitle({ children }: { children: ReactNode }) {
 }
 
 export function DialogContent({ children }: { children: ReactNode }) {
-  return <main className="flex flex-col p-4">{children}</main>;
+  return <main className="flex flex-col px-4 py-2">{children}</main>;
 }
 
 export function DialogFooter({ children }: { children: ReactNode }) {
   return (
-    <footer className="p-4 flex justify-end border-t-2 border-zinc-300">
+    <footer className="p-4 flex justify-end border-t-2 border-zinc-300 gap-2">
       {children}
     </footer>
   );
