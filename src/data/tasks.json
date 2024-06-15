@@ -7,29 +7,29 @@
         "id": "1",
         "name": "Estudar React",
         "description": "Buscar conteúdos e estudar o que for necessário",
-        "start": "09/06/2024",
-        "finish": "10/06/2024"
+        "start": "2024-06-14T24:00:00.000Z",
+        "finish": "2024-06-15T24:00:00.000Z"
       },
       {
         "id": "2",
         "name": "Estudar Vite",
         "description": "Buscar conteúdos e estudar o que for necessário",
-        "start": "09/06/2024",
-        "finish": "10/06/2024"
+        "start": "2024-06-14T24:00:00.000Z",
+        "finish": "2024-06-15T24:00:00.000Z"
       },
       {
         "id": "3",
         "name": "Criar um projeto",
         "description": "Buscar conteúdos e estudar o que for necessário",
-        "start": "09/06/2024",
-        "finish": "10/06/2024"
+        "start": "2024-06-14T24:00:00.000Z",
+        "finish": "2024-06-15T24:00:00.000Z"
       },
       {
         "id": "4",
         "name": "Partir para um novo framework",
         "description": "Buscar conteúdos e estudar o que for necessário",
-        "start": "09/06/2024",
-        "finish": "10/06/2024"
+        "start": "2024-06-14T24:00:00.000Z",
+        "finish": "2024-06-15T24:00:00.000Z"
       }
     ]
   },
@@ -41,22 +41,22 @@
         "id": "5",
         "name": "Estudar HTML",
         "description": "Buscar conteúdos e estudar o que for necessário",
-        "start": "09/06/2024",
-        "finish": "10/06/2024"
+        "start": "2024-06-14T24:00:00.000Z",
+        "finish": "2024-06-15T24:00:00.000Z"
       },
       {
         "id": "6",
         "name": "Estudar CSS",
         "description": "Buscar conteúdos e estudar o que for necessário",
-        "start": "09/06/2024",
-        "finish": "10/06/2024"
+        "start": "2024-06-14T24:00:00.000Z",
+        "finish": "2024-06-15T24:00:00.000Z"
       },
       {
         "id": "7",
         "name": "Estudar Javascript",
         "description": "Buscar conteúdos e estudar o que for necessário",
-        "start": "09/06/2024",
-        "finish": "10/06/2024"
+        "start": "2024-06-14T24:00:00.000Z",
+        "finish": "2024-06-15T24:00:00.000Z"
       }
     ]
   },
@@ -68,8 +68,8 @@
         "id": "8",
         "name": "Testar a aplicação",
         "description": "Testar a aplicação pronta",
-        "start": "09/06/2024",
-        "finish": "10/06/2024"
+        "start": "2024-06-14T24:00:00.000Z",
+        "finish": "2024-06-15T24:00:00.000Z"
       }
     ]
   }

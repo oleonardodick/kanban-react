@@ -8,7 +8,7 @@ import {
 } from '../Dialog';
 import { useContext } from 'react';
 import { DialogContext } from '../../contexts/DialogContext';
-import { ITask } from '../../interfaces/ITaks';
+import { ITask } from '../../interfaces/ITarefa';
 import Button from '../Button';
 import CardForm from './CardForm';
 

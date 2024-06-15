@@ -3,9 +3,13 @@
 - Vite
 - Typescript
 - TailwindCss
-- Immer
 - Lucide React
 - Context API
+- React-Hook-Form
+- Zod
+- Date-fns
+- Axios
+- Tanstack/react-query
 
 # Vite + React + Typescript
 

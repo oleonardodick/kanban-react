@@ -1,10 +1,13 @@
 import { Draggable } from '@hello-pangea/dnd';
-import { ITask } from '../../interfaces/ITaks';
-import { returnData } from '../../util/convertData';
+import { ITask } from '../../interfaces/ITarefa';
+// import { returnData } from '../../util/convertData';
+import { format, parseISO } from 'date-fns';
 import { Clock4 } from 'lucide-react';
 import { useContext } from 'react';
 import { DialogContext } from '../../contexts/DialogContext';
 import CardModal from './CardModal';
+import { ptBR } from 'date-fns/locale';
+import { returnData } from '../../util/convertData';
 
 interface CardType {
   task: ITask;

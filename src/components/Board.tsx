@@ -1,34 +1,40 @@
-import List from './List';
-import { produce } from 'immer';
-import Data from '../data/tasks.json';
 import { DragDropContext, OnDragEndResponder } from '@hello-pangea/dnd';
-import { useState } from 'react';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { buscaListasTarefas } from '../repositories/listaTarefas';
+import List from './List';
+import { atualizaStatusTarefa } from '../repositories/tarefas';
 
 export default function Board() {
-  const [lists, setLists] = useState(Data);
+  const queryClient = useQueryClient();
+
+  const { data: listaStatus } = useQuery({
+    queryKey: ['status'],
+    queryFn: buscaListasTarefas,
+  });
+
+  const { mutate } = useMutation({
+    mutationKey: ['atualizaStatusTarefa'],
+    mutationFn: atualizaStatusTarefa,
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ['getTarefas'],
+      });
+    },
+  });
 
   const onDragEnd: OnDragEndResponder = (result) => {
     if (result.destination) {
-      const from = Number(result.source.droppableId);
-      const to = Number(result.destination.droppableId);
-      const sourceIndex = result.source.index;
-      const destinationIndex = result.destination.index;
+      const to = result.destination.droppableId;
+      const card = result.draggableId;
 
-      setLists(
-        produce(lists, (draft) => {
-          const dragged = draft[from].tasks[sourceIndex];
-
-          draft[from].tasks.splice(sourceIndex, 1);
-          draft[to].tasks.splice(destinationIndex, 0, dragged);
-        })
-      );
+      mutate({ id: card, novoStatus: to });
     }
   };
   return (
     <div className="flex h-screen p-4 gap-5">
       <DragDropContext onDragEnd={onDragEnd}>
-        {lists.map((task, index) => (
-          <List lista={task} index={index} key={task.id} />
+        {listaStatus?.map((status) => (
+          <List idStatus={status.id} titulo={status.titulo} key={status.id} />
         ))}
       </DragDropContext>
     </div>

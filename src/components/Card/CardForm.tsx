@@ -4,7 +4,14 @@ import TextArea from '../TextArea';
 import { useForm } from 'react-hook-form';
 
 export default function CardForm() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm({
+    defaultValues: {
+      taskName: '',
+      taskDescription: '',
+      taskStart: '',
+      taskEnd: '',
+    },
+  });
 
   const onSubmit = (data) => {
     console.log(data);

@@ -1,0 +1,38 @@
+{
+  "listasTarefas": [
+    {
+      "id": "1",
+      "titulo": "Pentende"
+    },
+    {
+      "id": "2",
+      "titulo": "Iniciado"
+    },
+    {
+      "id": "3",
+      "titulo": "Aguardando"
+    },
+    {
+      "id": "4",
+      "titulo": "Concluído"
+    }
+  ],
+  "tarefas": [
+    {
+      "id": "1",
+      "idStatus": "1",
+      "name": "Estudar React",
+      "description": "Procurar alguns cursos e começar a estudar",
+      "start": "2024-06-14T24:00:00.000Z",
+      "finish": "2024-06-15T24:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "idStatus": "1",
+      "name": "Estudar Python",
+      "description": "Realizar os exercícios propostos",
+      "start": "2024-06-14T24:00:00.000Z",
+      "finish": "2024-06-15T24:00:00.000Z"
+    }
+  ]
+}
